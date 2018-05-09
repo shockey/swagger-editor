@@ -1,7 +1,6 @@
 .editor-validation-pane {
   flex-shrink: 0;
   border-right: 1px solid rgb(206, 206, 206);
-  border-top: 1px solid rgb(206, 206, 206);
 
   .vpane-status-bar {
     min-height: 3em;
@@ -16,15 +15,15 @@
     }
 
     &--status-has-warnings {
-      color: rgb(239, 187, 129);
+      color: rgb(245, 182, 120);
     }
 
     &--status-invalid {
-      color: rgb(149, 184, 121);
+      background-color: rgb(140, 26, 17);
+      color: white;
     }
 
     &__indicator {
-      font-weight: bold;
       font-size: 1.3em;
     }
   }
