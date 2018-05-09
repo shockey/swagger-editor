@@ -13,6 +13,7 @@ import EditorAutosuggestSnippetsPlugin from "./plugins/editor-autosuggest-snippe
 import EditorAutosuggestKeywordsPlugin from "./plugins/editor-autosuggest-keywords"
 import EditorAutosuggestOAS3KeywordsPlugin from "./plugins/editor-autosuggest-oas3-keywords"
 import EditorAutosuggestRefsPlugin from "./plugins/editor-autosuggest-refs"
+import EditorValidationPanePlugin from "./plugins/editor-validation-pane"
 import PerformancePlugin from "./plugins/performance"
 import JumpToPathPlugin from "./plugins/jump-to-path"
 
@@ -32,6 +33,7 @@ const plugins = {
   EditorAutosuggestKeywordsPlugin,
   EditorAutosuggestRefsPlugin,
   EditorAutosuggestOAS3KeywordsPlugin,
+  EditorValidationPanePlugin,
   PerformancePlugin,
   JumpToPathPlugin,
 }
