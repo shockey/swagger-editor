@@ -8,7 +8,7 @@ const ValidationPane = ({ problems }) => {
   const errors = problems.filter(e => e.get("level") === "error")
   const warnings = problems.filter(e => e.get("level") === "warning")
 
-  const status = errors.size ? "invalid" : warnings.size ? "has-warnings" : "valid"
+  const status = errors.size ? "errors" : warnings.size ? "warnings" : "valid"
 
   return <div className={`editor-validation-pane`}>
     <div className={`vpane-status-bar vpane-status-bar--status-${status}`}>
@@ -28,3 +28,5 @@ ValidationPane.defaultProps = {
 }
 
 export default ValidationPane
+
+// Helper components
