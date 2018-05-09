@@ -7,6 +7,7 @@
 
 import React from "react"
 import { List } from "immutable"
+import ValidationPane from "./validation-pane"
 import "./editor.less"
 
 // Wrap-Components
@@ -14,7 +15,7 @@ import "./editor.less"
 const WrapEditorContainerWithValidationPane = (EditorContainer) => props => {
   return <div className={`split-editor-validation-pane-container`}>
     <EditorContainer {...props} />
-    <div className={`editor-validation-pane`}>Validation</div>
+    <ValidationPane />
   </div>
 }
 
