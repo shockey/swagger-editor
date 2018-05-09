@@ -1,6 +1,10 @@
 // 1. Wrap the Errors container to filter out structural and semantic errors
 // 2. Wrap the EditorLayout to inject a ValidationPane below it
 // 3.
+
+// TODO: fix use of html IDs in the Editor
+// TODO: consider breaking up this file
+
 import React from "react"
 import { List } from "immutable"
 import "./editor.less"
