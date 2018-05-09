@@ -4,6 +4,7 @@
 
 // TODO: fix use of html IDs in the Editor
 // TODO: consider breaking up this file
+// TODO: merge UI compat branch
 
 import React from "react"
 import { List } from "immutable"
@@ -15,8 +16,17 @@ import "./editor.less"
 const WrapEditorContainerWithValidationPane = (EditorContainer) => props => {
   return <div className={`split-editor-validation-pane-container`}>
     <EditorContainer {...props} />
-    <ValidationPane />
+    <ValidationPane problems={props.errSelectors.errorsForValidationPaneDisplay()} />
   </div>
+}
+
+// Selectors
+
+const errorsForValidationPaneDisplay = (state) => {
+  return state.get("errors", List())
+    .filter(err => {
+      return isValidationPaneError(err)
+    })
 }
 
 // Wrap-Selectors
@@ -44,6 +54,9 @@ export default function() {
     },
     statePlugins: {
       err: {
+        selectors: {
+          errorsForValidationPaneDisplay
+        },
         wrapSelectors: {
           errorsForUiDisplay
         }
